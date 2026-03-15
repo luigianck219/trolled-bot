@@ -16,13 +16,13 @@ module.exports = {
     ),
 
   async execute(interaction, client) {
-    await interaction.deferReply({ ephemeral: false });
     const sub = interaction.options.getSubcommand();
+    await interaction.deferReply({ ephemeral: sub === 'mostra' });
 
     if (sub === 'mostra') {
       const topUsers = await database.getTopUsers(10);
       const embed = buildLeaderboardEmbed(topUsers);
-      return interaction.editReply({ embeds: [embed], ephemeral: true });
+      return interaction.editReply({ embeds: [embed] });
     }
 
     if (sub === 'imposta') {
