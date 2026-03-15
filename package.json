@@ -1,0 +1,22 @@
+{
+  "name": "trolled-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord per il server TROLLED - clip, votazioni e classifica punti",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "discord.js": "^14.14.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
